@@ -1,0 +1,17 @@
+p{
+    color: white;
+    font-size: 20px;
+}
+
+.inputEuro {
+    padding: 12px 20px;
+    display: inline-block;
+    border: 3px solid rgb(133, 106, 168);
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  
+  .imgBandeiras{
+    border-radius: 50%;
+    width: 50px;
+ }

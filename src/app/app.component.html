@@ -11,12 +11,20 @@
 </div>
 
 <div class="content" role="main">
-
   <h2>Olá seja bem vindo ao Conversor!</h2>
   <img
   width="100px"
   src="assets/pin.gif"
   />
 </div>
-<input type="number" />
-<router-outlet></router-outlet>
+<div class="container">
+  <br>
+  <h2>Escolha a moeda desejada: </h2>
+  <div class="menulink">
+    <a routerLink="dolar" class="opcao">Dólar Americano</a>
+    <a routerLink="euro" class="opcao">Euro x Real</a>
+    <!-- <a routerLink="" class="opcao">Voltar</a> -->
+
+    <router-outlet></router-outlet>
+  </div>
+</div>

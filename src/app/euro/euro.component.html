@@ -1,0 +1,8 @@
+<img class="imgBandeiras" src="https://s3-sa-east-1.amazonaws.com/beecambioimages/currency-flags/EUR.svg">
+<p>Euro x Real :</p>
+<input type="number" class="inputEuro" placeholder="€5,75" #box (keyup)="calcEuroReal($event)">
+<p>Resultado = {{numberResult | currency:'BRL':'symbol':'3.2-2':'pt'}}</p>
+
+<p>Real x Euro :</p>
+<input type="number" class="inputEuro" placeholder="R$1,00" #box (keyup)="calcRealEuro($event)">
+<p>Resultado = {{realEuroRes | currency:'EUR':'symbol':'3.2-2'}}</p>
