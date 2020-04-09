@@ -1,16 +1,14 @@
-<!-- Toolbar -->
-<div class="content" role="main">
-  <h2>Olá seja bem vindo ao Conversor!</h2>
-</div>
-<div class="content">
-  <br>
-  <h2>Escolha a moeda desejada: </h2>
-  <input [value]="name" (input)="name=$event.target.value"/>
-  <p>{{name}}</p>
-  <button click="clearName()">Apagar</button>
-  <br/>
-  <input [value]="number1" (input)="number1=$event.target.value"/>
-  <p>{{number1}}</p>
-    <router-outlet></router-outlet>
-
+<div class="componentBackground">
+  <div class="content">
+  <h2>Bem vindo ao Conversor!</h2>
+    <h2>Escolha a moeda desejada: </h2>
+    <input [value]="name" (input)="name=$event.target.value"/>
+    <p>{{name}}</p>
+    <button (click)="clearName()">Apagar</button>
+    <br/>
+    <input [value]="number1" (input)="number1=$event.target.value"/>
+    <p>{{number1}}</p>
+    <button (click)="clearNum()">Apagar Número</button>
+      <router-outlet></router-outlet>
+  </div>
 </div>
