@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Conversor Angular';
+
+  name="";
+  number1="";
+
+  clearName(){
+    this.name=""
+  }
 }
