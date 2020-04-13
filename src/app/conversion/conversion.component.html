@@ -1,5 +1,17 @@
-<div id="center">
+<!-- <div id="center">
     <input type="number" name="entrada1" (keyup)="pegaValor($event)">
-    <button type="button" (click)="trocaValor()" >Troca</button>
-    <input type="number" name="entrada2" value={{valueMoney}}>
-</div>
+    <button type="button" (click)="trocaValor()">Troca</button>
+    <input type="number" name="entrada2" value={{result}}>
+</div> -->
+  
+<img class="imgBandeiras" src="https://s3-sa-east-1.amazonaws.com/beecambioimages/currency-flags/CAD.svg">
+<p>Real x Dolar Canadense :</p>
+<input type="number" class="inputReal" placeholder="R$3,74" (keyup)="enviaReal($event)"/>
+<p>Resultado = {{numResult}}</p>
+
+<br/>
+
+<!-- <div class="imgDolar"></div> -->
+<p>Dolar Canadense x Real :</p>
+<input type="number" class="inputReal" placeholder="R$1,00" (keyup)="enviaDolar($event)"/>
+<p>Resultado = {{realDolar}}</p>

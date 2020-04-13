@@ -1,10 +1,11 @@
 <div>
-  <div class="content">
+  <div>
     <header>
         <h2>Bem vindo ao Conversor!</h2>
         <h2>Escolha a moeda desejada: </h2>
     </header>
     <body>
+      <a routerLink="/euro" >Euro</a>
       <!-- <input [value]="name" (input)="name=$event.target.value"/>
       <p>{{name}}</p>
       <button (click)="clearName()">Apagar</button>
@@ -14,9 +15,9 @@
       <!-- <button (click)="clearNum()">Apagar Número</button> --> -->
       <router-outlet></router-outlet>
     
-    <section>
+    <!-- <section>
       <app-conversion></app-conversion>
-    </section>
+    </section> -->
     
     </body>
   </div>
