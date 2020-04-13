@@ -2,13 +2,18 @@
   <div class="content">
   <h2>Bem vindo ao Conversor!</h2>
     <h2>Escolha a moeda desejada: </h2>
-    <input [value]="name" (input)="name=$event.target.value"/>
+    
+    <!-- <input [value]="name" (input)="name=$event.target.value"/>
     <p>{{name}}</p>
     <button (click)="clearName()">Apagar</button>
     <br/>
     <input [value]="number1" (input)="number1=$event.target.value"/>
-    <p>{{number1}}</p>
-    <button (click)="clearNum()">Apagar Número</button>
-      <router-outlet></router-outlet>
+    <p>{{number1}}</p> -->
+    <!-- <button (click)="clearNum()">Apagar Número</button> -->
+      <!-- <router-outlet></router-outlet> -->
   </div>
+  <section>
+    <app-conversion></app-conversion>
+  </section>
+  
 </div>

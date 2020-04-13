@@ -8,13 +8,15 @@ import { HttpClient } from '@angular/common/http';
 
 export class CurrencyConversionService {
 
-  private apiUrl = "https://api.exchangeratesapi.io/latest";
+  private apiUrl = "https://api.exchangeratesapi.io/latest?=base=BRL";
 
-  constructor(private http:HttpClient) { }
+  dataBase
+  conversionValue
+  constructor(private http: HttpClient) { }
 
   getRates(){
+    console.log("funciona")
     return this.http.get(this.apiUrl)
   }
-  
 
 }
