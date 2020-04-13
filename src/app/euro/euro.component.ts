@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class EuroComponent implements OnInit {
 
   result: number = 0;
-  real
+  valorDigitado:any;
 
   constructor() { }
 
@@ -16,9 +16,13 @@ export class EuroComponent implements OnInit {
   }
 
   pegaValor(event) {
-    this.real = event.target.value
-    this.real = Number(this.real)
-    this.result = this.real * 5.67
+    this.valorDigitado = event.target.value
+    this.valorDigitado = Number(this.valorDigitado)
+    this.result = this.valorDigitado * 5.67
+  }
+
+  clearNum(){
+    this.valorDigitado=null;
   }
 
 }

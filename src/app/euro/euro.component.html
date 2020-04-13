@@ -1,4 +1,5 @@
 <div id="center">
-    <input type="number" name="entrada1" (keyup)="pegaValor($event)" placeholder="R$ 0,00">
-    <input type="number" name="entrada2" value={{result}}>
+    <input type="number" name="entrada1" (keyup)="pegaValor($event)" placeholder="R$ 1,00">
+    <input type="number" name="entrada2" value={{result}} placeholder="€ 5,66">
+    <button (click)="clearNum()">Apagar Número</button>
 </div>

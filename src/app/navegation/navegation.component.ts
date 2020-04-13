@@ -23,9 +23,6 @@ export class NavegationComponent implements OnInit {
       this.entries = Object.entries(this.conversionData.rates);
       this.moneys = Object.keys(this.conversionData.rates);
       this.rates = Object.values(this.conversionData.rates);
-      console.log(this.entries)
-      console.log(this.moneys)
-      console.log(this.rates)
     })
   }
 

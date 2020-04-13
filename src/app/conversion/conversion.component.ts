@@ -16,34 +16,34 @@ export class ConversionComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // pegaValor(event){
+  pegaValor(event){
+    this.valorDigitado = event.target.value;
+    let resultado = this.valorDigitado;
+    this.result = Number(resultado)
+    this.result = this.valorDigitado * this.conversion.conversionValue;
+  }
+
+  trocaValor(event){
+    let resultado = this.valorDigitado
+    this.result = Number(resultado)
+    this.result = this.valorDigitado * this.conversion.conversionValue
+  }
+
+  // valorReal:number = 3.74;
+  // numResult:number;
+  // realDolar:number;
+
+  // enviaReal(event){
   //   this.valorDigitado = event.target.value;
   //   let resultado = this.valorDigitado;
-  //   this.result = Number(resultado)
-  //   this.result = this.valorDigitado * this.conversion.conversionValue;
+  //   this.numResult = Number(resultado);
+  //   this.numResult = this.numResult / this.valorReal;
   // }
 
-  // trocaValor(event){
-  //   let resultado = this.valorDigitado
-  //   this.result = Number(resultado)
-  //   this.result = this.valorDigitado * this.conversion.conversionValue
+  // enviaDolar(event){
+  //   this.valorDigitado = event.target.value;
+  //   let resultado = this.valorDigitado;
+  //   this.realDolar = Number(resultado);
+  //   this.realDolar = this.realDolar * this.valorReal;
   // }
-
-  valorReal:number = 3.74;
-  numResult:number;
-  realDolar:number;
-
-  enviaReal(event){
-    this.valorDigitado = event.target.value;
-    let resultado = this.valorDigitado;
-    this.numResult = Number(resultado);
-    this.numResult = this.numResult / this.valorReal;
-  }
-
-  enviaDolar(event){
-    this.valorDigitado = event.target.value;
-    let resultado = this.valorDigitado;
-    this.realDolar = Number(resultado);
-    this.realDolar = this.realDolar * this.valorReal;
-  }
 }
