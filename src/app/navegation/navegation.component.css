@@ -13,3 +13,13 @@ li:hover{
     border: 1px solid floralwhite;
     border-radius: 5px;
 }
+
+.opcao{
+    padding: 10px;
+    background-color: cadetblue;
+    border: 1px solid cadetblue;
+    border-radius: 5px;
+    color: aliceblue;
+    margin: 10px;
+    text-decoration: none;
+  }

@@ -8,21 +8,14 @@ import { CurrencyConversionService } from '../currency-conversion.service';
 })
 export class ConversionComponent implements OnInit {
 
-  public conversionData
-  entries: any
-  moneys: any;
-  rates: any;
-
   constructor(private conversion: CurrencyConversionService) { }
 
-  ngOnInit(): void {
-    this.conversion.getRates().subscribe((data) => {
-      this.conversionData = new Object(data);
-      this.entries = Object.entries(this.conversionData.rates);
-      this.moneys = Object.keys(this.conversionData.rates);
-      this.rates = Object.values(this.conversionData.rates);
-    console.log("AQUI!")
-    })
+  private resultSet:any = {};
+
+  ngOnInit()
+  {
+    this.conversion.getRates().subscribe(data => this.resultSet = data);
+    console.log(this.resultSet.base);
   }
 
   calcValue(event) {

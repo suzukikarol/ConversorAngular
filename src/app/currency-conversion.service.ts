@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { ListCurrency } from './model/currency.model';
+import { ConvertResultModel } from './model/currency.model';
 
 
 @Injectable({
@@ -16,9 +16,8 @@ export class CurrencyConversionService {
   conversionValue
   constructor(private http: HttpClient) { }
 
-  getRates():Observable<any>{
-    console.log("PASSOU!")
-    return this.http.get(this.apiUrl)
+  getRates():Observable<ConvertResultModel>{
+    return this.http.get<ConvertResultModel>(this.apiUrl)
   }
 
 }
