@@ -15,10 +15,10 @@ export class EuroComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  pegaValor(event) {
+  inputValue(event) {
     this.valorDigitado = event.target.value
     this.valorDigitado = Number(this.valorDigitado)
-    this.result = this.valorDigitado * 5.67
+    this.result = this.valorDigitado * 5.66
   }
 
   clearNum(){

@@ -8,42 +8,26 @@ import { CurrencyConversionService } from '../currency-conversion.service';
 })
 export class ConversionComponent implements OnInit {
 
-  result: number = 0;
-  valorDigitado: number;
+  public conversionData
+  entries: any
+  moneys: any;
+  rates: any;
 
   constructor(private conversion: CurrencyConversionService) { }
 
   ngOnInit(): void {
+    this.conversion.getRates().subscribe((data) => {
+      this.conversionData = new Object(data);
+      this.entries = Object.entries(this.conversionData.rates);
+      this.moneys = Object.keys(this.conversionData.rates);
+      this.rates = Object.values(this.conversionData.rates);
+    console.log("AQUI!")
+    })
   }
 
-  pegaValor(event){
-    this.valorDigitado = event.target.value;
-    let resultado = this.valorDigitado;
-    this.result = Number(resultado)
-    this.result = this.valorDigitado * this.conversion.conversionValue;
-  }
+  calcValue(event) {
+    let result = event.target.value
+    return this.conversion.conversionValue = result
+  } 
 
-  trocaValor(event){
-    let resultado = this.valorDigitado
-    this.result = Number(resultado)
-    this.result = this.valorDigitado * this.conversion.conversionValue
-  }
-
-  // valorReal:number = 3.74;
-  // numResult:number;
-  // realDolar:number;
-
-  // enviaReal(event){
-  //   this.valorDigitado = event.target.value;
-  //   let resultado = this.valorDigitado;
-  //   this.numResult = Number(resultado);
-  //   this.numResult = this.numResult / this.valorReal;
-  // }
-
-  // enviaDolar(event){
-  //   this.valorDigitado = event.target.value;
-  //   let resultado = this.valorDigitado;
-  //   this.realDolar = Number(resultado);
-  //   this.realDolar = this.realDolar * this.valorReal;
-  // }
 }

@@ -1,15 +1,15 @@
-<div>
   <div>
-    <header>
-        <h2>Bem vindo ao Conversor!</h2>
-        <h2>Escolha a moeda desejada: </h2>
+    <header class="navegacao">
+      <img src="../assets/currency_exchange.png" width="50">
+      <h2>Bem vindo ao Conversor!</h2>
     </header>
-    <body>
-      <a routerLink="/euro" >Euro</a>
-      <a routerLink="/conversion">Conversor</a>
-     <router-outlet></router-outlet>
-    <br/>
-  
-    </body>
+    
+    <section>
+      <div class="componentBody">
+        <h2>Escolha a moeda desejada: </h2>
+        <a routerLink="/euro" class="opcao">Euro</a>
+        <a routerLink="/conversion" class="opcao">Conversor</a>
+        <router-outlet></router-outlet>
+      </div>
+    </section>
   </div>
-</div>

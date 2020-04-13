@@ -1,5 +1,17 @@
-<div id="center">
-    <input type="number" name="entrada1" (keyup)="pegaValor($event)">
-    <button type="button" (click)="trocaValor()">Troca</button>
-    <input type="number" name="entrada2" value={{result}}>
-</div>
+<ul>
+    <li (click)="calcValue($event)" value="{{rates[26]}}">
+      {{moneys[26]}}
+    </li>
+    <li (click)="calcValue($event)" value="{{rates[18]}}">
+      {{moneys[18]}}
+    </li>
+    <li (click)="calcValue($event)" value="{{rates[0]}}">
+      {{moneys[0]}}
+    </li>
+    <li (click)="calcValue($event)" value="{{rates[7]}}">
+      {{moneys[7]}}
+    </li>
+    <li (click)="calcValue($event)" value="{{rates[27]}}">
+      {{moneys[27]}}
+    </li>
+  </ul>
