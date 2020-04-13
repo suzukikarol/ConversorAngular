@@ -1,0 +1,24 @@
+#center{
+    display: flex;
+    flex-direction: row;
+    width: 700px;
+    justify-content: space-evenly;
+}
+#center input{
+    width: 30%;
+    border: none;
+    border-bottom: 1px solid thistle;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius:  10px;
+    padding: 10px;
+    margin: 0px 20px;
+    background-color: cornsilk;
+}
+#center button{
+    border: none;
+    border-radius: 4px;
+    background-color: goldenrod;
+    color: cornsilk;
+    padding: 13px;
+    cursor: pointer;
+}
