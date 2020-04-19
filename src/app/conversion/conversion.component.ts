@@ -8,19 +8,58 @@ import { CurrencyConversionService } from '../currency-conversion.service';
 })
 export class ConversionComponent implements OnInit {
 
+  valueInput: number;
+  valueInputReverse: number;
+  result: number;
+  resultReverse: number;
+  valueCurrency: number;
+  initials: string = "GBP";
+  guardaData: any;
+  bases = ['GBP', 'USD', 'EUR', 'JPY'];
+  valores = []
+
   constructor(private conversion: CurrencyConversionService) { }
 
-  private resultSet:any = {};
-
-  ngOnInit()
-  {
-    this.conversion.getRates().subscribe(data => this.resultSet = data);
-    console.log(this.resultSet.base);
+  ngOnInit() {
+    for (let i in this.bases) {
+      this.conversion.base = this.bases[i]
+      this.conversion.getRates().subscribe(
+        (resp) => {
+          this.guardaData = new Object(resp)
+          this.valores.push(this.guardaData.rates.BRL)
+        });
+      }
   }
 
-  calcValue(event) {
-    let result = event.target.value
-    return this.conversion.conversionValue = result
-  } 
+  saveValue(event) {
+    this.valueInput = Number(event.target.value);
+    this.result = this.valueInput * this.valueCurrency;
+  }
 
+  saveValueReverse(event) {
+    this.valueInputReverse = Number(event.target.value);
+    this.resultReverse = this.valueInputReverse / this.valueCurrency;
+  }
+
+   calcula(event) {
+    let eventTitle = event.target.title;
+    this.conversion.base = eventTitle
+    this.conversion.getRates().subscribe(
+      (resposta) => {
+        this.guardaData = new Object(resposta)
+        this.valueCurrency = this.guardaData.rates.BRL;
+        this.result = 1;
+        this.resultReverse = this.valueCurrency;
+      }
+    )
+    switch (eventTitle) {
+      case 'GBP': this.initials = "GBP";
+        break;
+      case 'USD': this.initials = "USD";
+        break;
+      case 'EUR': this.initials = "EUR";
+        break;
+      case 'JPY': this.initials = "JPY";
+    }  
+   }
 }

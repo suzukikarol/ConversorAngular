@@ -1,23 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { ConvertResultModel } from './model/currency.model';
 
-
+const apiUrl = 'https://api.exchangeratesapi.io/latest?=';
 @Injectable({
   providedIn: 'root'
 })
 
 export class CurrencyConversionService {
 
-  private apiUrl = 'https://api.exchangeratesapi.io/latest';
+  public base:any;
 
-  dataBase
-  conversionValue
   constructor(private http: HttpClient) { }
 
-  getRates():Observable<ConvertResultModel>{
-    return this.http.get<ConvertResultModel>(this.apiUrl)
+  getRates(){
+    return this.http.get(apiUrl + this.base)
   }
 
 }

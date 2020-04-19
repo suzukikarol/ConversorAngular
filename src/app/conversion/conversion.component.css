@@ -1,24 +1,61 @@
-#center{
+  .cont{
+      margin: 20px auto;
+      justify-content: center;
+      display: flex;
+      /* height: 280px; */
+  }
+  .legends{
     display: flex;
-    flex-direction: row;
-    width: 700px;
-    justify-content: space-evenly;
-}
-#center input{
-    width: 30%;
+    justify-content: center;
+    margin: 0 auto;
+    width: 61%;
+  
+  }
+  .legends p{
+    font-size: 20px;
+    color: black;
+    margin: 0px 50px;
+    padding: 5px 13px;
+    border-radius: 18px;
+    background-color: #8bc34ab0;
+  }
+  .btnConverter {
+    background-color: black;
     border: none;
-    border-bottom: 1px solid thistle;
-    border-bottom-left-radius: 10px;
-    border-top-right-radius:  10px;
-    padding: 10px;
-    margin: 0px 20px;
-    background-color: cornsilk;
-}
-#center button{
-    border: none;
-    border-radius: 4px;
-    background-color: goldenrod;
-    color: cornsilk;
-    padding: 13px;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 60px;
     cursor: pointer;
-}
+    border-radius: 50%;
+    height: 82px;
+    width: 90px;
+    text-align: center;
+    margin: 0px 40px;
+  }
+
+  .btnConverter:hover{
+    background-color: darkseagreen;
+  }
+  
+  .form {
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    height: 45px;
+    width: 59%;
+  }
+  .form1 {
+    border-radius: 9%;
+    text-align: center;
+    font-size: 17px;
+    border: none;
+    display: flex;
+  }
+
+  .form label{
+    padding: 10px;
+    background-color: cadetblue;
+  }

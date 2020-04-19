@@ -1,5 +1,24 @@
-<!-- <h2>Selecione a moeda desejada: </h2>
-<ul *ngFor="let item of rates">
-  <li>{{item.base}}</li>
-  <li>{{keys[0]}</li>
-</ul> -->
+<div class="cont">
+     <input (click)="calcula($event)" id="Libra" type="button" class="btnConverter" value="£">
+     <input (click)="calcula($event)" id="Dolar" type="button" class="btnConverter" value="$">
+     <input (click)="calcula($event)" id="Euro" type="button" class="btnConverter" value="€">
+     <input (click)="calcula($event)" id="Iyen" type="button" class="btnConverter" value="¥">
+</div>
+
+<div class="legends">
+    <p>Libras </p> 
+    <p>Real </p>
+    <p>Euro </p>
+    <p>Yênes </p>
+</div><br>
+
+
+<div class="forms">
+     <form class="form">
+          <label for="fname">{{ initials }}</label>
+          <input (keyup)="saveValue($event)" class="form1" type="text" id="fname" name="fname" value="{{ resultReverse | currency }}">
+          
+          <label for="lname">BRL: </label>
+          <input (keyup)="saveValueReverse($event)" class="form1" type="text" id="lname" name="lname" value=" {{ result | currency: 'R$' }}">
+     </form>
+</div>
